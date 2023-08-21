@@ -6,6 +6,9 @@ namespace strings
     {
         static void Main(string[] args)
         {
+            tring str = "Hello {0} to my Github named {1}";
+            str = string.Format(str, "My friends", "amaalselim");
+            Console.WriteLine(str);
             double salary = 1000;
             string s = "Your Salary is : {0:c2}";// print $1000.00
             string s = "Your Salary is : {0:c5}";// print $1000.00000
