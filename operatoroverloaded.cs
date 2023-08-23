@@ -11,6 +11,7 @@
             Console.WriteLine(m3.Amount);
             Console.WriteLine(m1 < m3);
             Console.WriteLine(m2 == m4);
+            console.writeline($"++m3 = {(++m3).Amount)}");
 
         }
 
