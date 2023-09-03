@@ -1,0 +1,66 @@
+﻿<docs>
+	<members name ="Generator">
+		<Generator>
+			<summary>
+				the main Generator class
+			</summary>
+			<remarks>
+				this class can generate Id and Randompassword '
+			</remarks>
+		</Generator>
+		<GenerateId>
+			<summary>
+				 Generate employee id by processing <paramref name="fname"/>,<paramref name="lname"/>,<paramref name="hiredate"/>
+				<list type="bullet">
+					 <item>
+						 <term>II</term>
+						 <description>
+							Employee initials(first letter of <paramref name="fname"/>) and(first letter of <paramref name="lname"/>)
+						</description>
+						
+					</item>
+					 <item>
+						 <term>YY</term>
+						 <description>Hire Date 2 digit year</description>
+						
+					</item>
+					 <item>
+						 <term>MM</term>
+						 <description>Hire Date 2 digit month</description>
+						
+					</item>
+					<item>
+						<term>DD</term>
+						<description>Hire Date 2 digit day</description>
+					</item>
+					 <item>
+						 <term>SS</term>
+						 <description>sequence No. (01-99)</description>
+					</item>
+				</list>
+			</summary>
+			 <param name="fname"></param>
+			 <param name="lname"></param>
+			 <param name="hiredate"></param>
+			 <example>
+				 <code>
+						var id = Generator ("Amaal","selim",new DateTime(2023,12,10,0,0,0));
+						console.writeline(id);
+				</code>
+			</example>
+			 <returns>
+					employee Id as string
+			</returns>
+			<exception cref="System.InvalidOperationException">
+				thrown when <paramref name="fname"/>is null
+			</exception>
+			 <exception cref="System.InvalidOperationException">
+				thrown when <paramref name="lname"/>is null
+			</exception>
+			<exception cref="System.InvalidOperationException">
+				thrown when <paramref name="hiredate"/>is in the past
+			</exception>
+			see <see cref="Generator.GenerateRandomPassword(int)"/> to generate random password
+		</GenerateId>
+	</members>
+</docs>
