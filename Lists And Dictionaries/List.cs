@@ -7,17 +7,25 @@
             var Egypt = new Country { Name = "EGYPT", Isocode = "EGY" };
             var Brazil = new Country { Name = "BRAZIL", Isocode = "BRA" };
             var IRaq = new Country { Name = "IRAQ", Isocode = "IRQ"};
-            Country[] countryarray = new Country[] { Egypt, Brazil, IRaq };
-            List<Country> countries = new List<Country>(3);//list
+            
+            Country[] countryarray = new Country[] 
+            {  
+                Egypt, Brazil, IRaq 
+             };
+            List<Country> countries = new List<Country>(3);  //list
+            // Add item to list
             countries.Add(new Country { Name = "UNTITED STATE", Isocode = "USA" });// O(1)
             countries.AddRange(countryarray);// O(1)
             countries.Insert(1, new Country { Name = "ARGANTINE", Isocode = "ARG" });// O(n);
             Print(countries);
+            
+            //Remove(item)from list
             countries.RemoveAt(4);
             countries.RemoveAll(X => X.Name.EndsWith("NE"));
             countries.Remove(new Country { Name = "EGYPT", Isocode = "EGY" });
             Print(countries);
         }
+        
         static void Print(List<Country> countries)
         {
             foreach (var country in countries)
